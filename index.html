@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Bittaval Shayari - A collection of emotional, romantic, and heart-touching Shayari to express your deepest feelings.">
+    <meta name="keywords" content="Bittaval Shayari, Shayari, love Shayari, romantic Shayari, heart-touching Shayari, sad Shayari, emotional Shayari">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Bittaval Shayari Collection">
+    <meta property="og:description" content="A collection of emotional, romantic, and heart-touching Shayari to express your deepest feelings.">
+    <meta property="og:image" content="https://example.com/your-image.jpg"> <!-- Replace with your website image -->
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bittaval Shayari Collection">
+    <meta name="twitter:description" content="A collection of emotional, romantic, and heart-touching Shayari to express your deepest feelings.">
+    <meta name="twitter:image" content="https://example.com/your-image.jpg"> <!-- Replace with your website image -->
+    <title>Bittaval Shayari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #222;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #FF6347;
+        }
+
+        .mode-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Content Pages */
+        .content {
+            display: none;
+            padding: 40px 20px;
+            margin-top: 60px; /* space for the navbar */
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Shayari Cards */
+        .shayari {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .shayari h3 {
+            font-size: 1.5rem;
+            color: #FF6347;
+            margin-bottom: 10px;
+        }
+
+        .shayari p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Button Styling */
+        .scroll-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #FF6347;
+            color: #fff;
+            border: none;
+            border-radius: 100%;
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .scroll-btn:hover {
+            background-color: #FF4500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #FF6347;
+        }
+
+        /* Instagram Icon */
+        .instagram-icon {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+            }
+
+            .shayari {
+                width: 80%;
+                margin: 10px auto;
+            }
+
+            .shayari h3 {
+                font-size: 1.3rem;
+            }
+
+            .shayari p {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="javascript:void(0);" onclick="showPage('home')">Home</a>
+        <a href="javascript:void(0);" onclick="showPage('about')">About Us</a>
+        <a href="javascript:void(0);" onclick="showPage('contact')">Contact</a>
+        <a href="javascript:void(0);" onclick="showPage('privacy')">Privacy Policy</a>
+        <span class="mode-toggle" onclick="toggleMode()">🌙</span>
+    </nav>
+
+    <!-- Home Page -->
+    <div class="content" id="home">
+        <header>
+            <h1>Bittaval Shayari</h1>
+        </header>
+        <div class="shayari">
+            <h3>Unspoken Words</h3>
+            <p>"Itna mat tarsa ki mujhe apne faisle par afsos ho, kal tu baat karna chahe, aur hum khamosh ho."</p>
+        </div>
+        <div class="shayari">
+            <h3>Emotions Unleashed</h3>
+            <p>🔥Hum Chhoone Ko To #tumhare 🤝Hathon Ko Bhi Taras Rahe Hai, Aur #dil Khuwaish Honthon Ki Kar Baitha Hai🌸</p>
+        </div>
+        <div class="shayari">
+            <h3>Silent Heartbeats</h3>
+            <p>"Uske intezaar ke maare hain hum, Bas uski yaadon ke sahare hain hum, Duniya jeet kar kya karna hai ab mujhe, Jise duniya se jeeta tha aaj ussi se haare hain hum."</p>
+        </div>
+        <div class="shayari">
+            <h3>Lost In Thoughts</h3>
+            <p>Har shaks nazar aa raha hai Apne hamsafar ke saath, Ek ham he akele khade hai Guzre hue kal ke sath....!!</p>
+        </div>
+        <div class="shayari">
+            <h3>Unmatched Beauty</h3>
+            <p>Woh saree mein, tum is kadar lagti ho, Jaise chaand ki chaandi bhi tumse nikharti ho. Nigahen kahaniyan sunaati hain, hothon pe khamoshi hai, Zubaan pe wafa, aur rooh mein unchai hai.</p>
+        </div>
+    </div>
+
+    <!-- About Us Page -->
+    <div class="content" id="about">
+        <header>
+            <h1>About Us</h1>
+        </header>
+        <p>Bittaval Shayari is the creative work of Dhaval, a passionate writer who loves expressing emotions through the art of Shayari. With each word, he aims to connect with people on a deep emotional level, bringing them closer to their own feelings.</p>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="content" id="contact">
+        <header>
+            <h1>Contact</h1>
+        </header>
+        <p>Follow me on Instagram for more updates and to connect with me:</p>
+        <a href="https://www.instagram.com/cloutsarcasm/" target="_blank" style="color: #FF6347; font-size: 1.2rem;">Instagram Profile</a>
+    </div>
+
+    <!-- Privacy Policy Page Content -->
+    <div class="content" id="privacy">
+        <header>
+            <h1>Privacy Policy</h1>
+        </header>
+        <div class="privacy-content">
+            <p>At Bittaval Shayari, we respect your privacy. We do not collect any personal data unless voluntarily provided by the user. We use cookies to enhance your experience on the website. For more details, please read our full Privacy Policy.</p>
+
+            <p>Welcome to Bittaval Shayari! Your privacy is of utmost importance to us. This Privacy Policy document outlines the types of personal information that is received and collected by Bittaval Shayari, and how it is used.</p>
+
+            <p>By using our website, you agree to the collection and use of information in accordance with this policy.</p>
+
+            <div class="section-title">1. Information We Collect</div>
+            <p>We collect personal information that you voluntarily provide when you use our website or interact with us. This may include:</p>
+            <ul>
+                <li><strong>Personal Identification Information</strong>: Name, email address, etc., when you contact us or subscribe to updates.</li>
+                <li><strong>Log Data</strong>: Our servers automatically collect certain data when you visit our website, such as IP addresses, browser type, and usage statistics.</li>
+                <li><strong>Cookies and Tracking Technologies</strong>: We use cookies to enhance your experience. You can control or disable cookies through your browser settings.</li>
+            </ul>
+
+            <div class="section-title">2. How We Use Your Information</div>
+            <p>The information we collect is used for various purposes, including:</p>
+            <ul>
+                <li>Improving our Website.</li>
+                <li>Communication: Sending you updates or promotions.</li>
+                <li>Personalization: Displaying relevant Shayari based on your preferences.</li>
+                <li>Legal Obligations: If required by law, we may disclose your information to comply with legal processes.</li>
+            </ul>
+
+            <div class="section-title">3. How We Protect Your Information</div>
+            <p>We take reasonable measures to protect your personal information from unauthorized access. However, we cannot guarantee absolute security.</p>
+
+            <div class="section-title">4. Third-Party Services</div>
+            <p>We may use third-party services such as Google Analytics or AdSense, which may collect and use data about your activity on our website. These third parties have their own privacy policies.</p>
+
+            <div class="section-title">5. Sharing Your Information</div>
+            <p>We do not sell, trade, or rent your personal information. We may share your data with trusted service providers or legal authorities if required by law.</p>
+
+            <div class="section-title">6. Your Rights</div>
+            <p>You have the right to access, correct, or delete your personal information. You can also opt out of promotional emails.</p>
+
+            <div class="section-title">7. Children’s Privacy</div>
+            <p>Our website is not intended for children under the age of 13. We do not knowingly collect information from children.</p>
+
+            <div class="section-title">8. Links to Other Websites</div>
+            <p>Our website may contain links to other websites. We are not responsible for the privacy practices of these external sites.</p>
+
+            <div class="section-title">9. Changes to This Privacy Policy</div>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+
+            <div class="section-title">10. Contact Us</div>
+            <p>If you have any questions or concerns about this Privacy Policy, feel free to contact us at:</p>
+        </div>
+    </div>
+
+    <!-- Scroll Button -->
+    <button class="scroll-btn" onclick="scrollToTop()">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Bittaval Shayari. All rights reserved.</p>
+        <a href="https://www.instagram.com/cloutsarcasm/" target="_blank">
+            <i class="instagram-icon">⭐⭐⭐⭐⭐</i>
+        </a>
+		
+    </footer>
+
+    <script>
+        // Show the appropriate page
+        function showPage(page) {
+            let pages = document.querySelectorAll('.content');
+            pages.forEach(function(p) {
+                p.classList.remove('active');
+            });
+            document.getElementById(page).classList.add('active');
+        }
+
+        // Toggle between Dark and Light Mode
+        function toggleMode() {
+            const body = document.body;
+            const icon = document.querySelector('.mode-toggle');
+
+            if (body.classList.contains('light-mode')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                icon.textContent = '🌕'; // Change icon to sun for dark mode
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                icon.textContent = '🌙'; // Change icon to moon for light mode
+            }
+        }
+
+        // Scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Initialize first page
+        showPage('home');
+    </script>
+
+</body>
+</html>
