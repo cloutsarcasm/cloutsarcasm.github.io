@@ -15,8 +15,10 @@
     <meta name="twitter:title" content="Bittaval Shayari Collection">
     <meta name="twitter:description" content="A collection of emotional, romantic, and heart-touching Shayari to express your deepest feelings.">
     <meta name="twitter:image" content="https://example.com/your-image.jpg"> <!-- Replace with your website image -->
-    <title>Bittaval Shayari</title>
+	
+	<meta name="google-adsense-account" content="ca-pub-9869872879491570">
 
+    <title>Bittaval Shayari</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
@@ -48,10 +50,11 @@
             width: 100%;
             background: #222;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 10;
+            animation: slideIn 0.5s ease-in-out;
         }
 
         nav a {
@@ -59,25 +62,33 @@
             margin: 0 20px;
             text-decoration: none;
             font-size: 1.2rem;
+            transition: color 0.3s;
         }
 
         nav a:hover {
             color: #FF6347;
+            transform: translateY(-5px);
         }
 
         .mode-toggle {
             position: absolute;
-            top: 10px;
+            top: 15px;
             right: 20px;
             font-size: 1.5rem;
             cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        /* Content Pages */
+        .mode-toggle:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Page Transitions */
         .content {
             display: none;
             padding: 40px 20px;
-            margin-top: 60px; /* space for the navbar */
+            margin-top: 80px; /* space for the navbar */
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .active {
@@ -87,27 +98,35 @@
         /* Shayari Cards */
         .shayari {
             background: #fff;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
             margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .shayari:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
         .shayari h3 {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: #FF6347;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .shayari p {
             font-size: 1.2rem;
             font-style: italic;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Button Styling */
+        /* Scroll Button */
         .scroll-btn {
             position: fixed;
             bottom: 20px;
@@ -116,24 +135,27 @@
             background-color: #FF6347;
             color: #fff;
             border: none;
-            border-radius: 100%;
+            border-radius: 50%;
             font-size: 2rem;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             z-index: 999;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .scroll-btn:hover {
             background-color: #FF4500;
+            transform: scale(1.1);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: #222;
             color: #fff;
-            margin-top: 20px;
+            margin-top: 30px;
+            animation: slideUp 0.5s ease-in-out;
         }
 
         footer a {
@@ -141,6 +163,7 @@
             text-decoration: none;
             font-size: 1.5rem;
             margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
@@ -151,6 +174,7 @@
         .instagram-icon {
             font-size: 2rem;
             color: #fff;
+            transition: color 0.3s ease;
         }
 
         /* Responsive Styles */
@@ -174,6 +198,38 @@
 
             footer {
                 font-size: 0.9rem;
+            }
+        }
+
+        /* Keyframe Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
     </style>
@@ -208,29 +264,20 @@
         </div>
         <div class="shayari">
             <h3>Lost In Thoughts</h3>
-            <p>Har shaks nazar aa raha hai Apne hamsafar ke saath, Ek ham he akele khade hai Guzre hue kal ke sath....!!</p>
-        </div>
-        <div class="shayari">
-            <h3>Unmatched Beauty</h3>
-            <p>Woh saree mein, tum is kadar lagti ho, Jaise chaand ki chaandi bhi tumse nikharti ho. Nigahen kahaniyan sunaati hain, hothon pe khamoshi hai, Zubaan pe wafa, aur rooh mein unchai hai.</p>
+            <p>Har shayari ke baad ik khoya sa pal hai, Humne usse chhup kar aapne khayalon ki #duniya jeetne ki koshish ki thi.</p>
         </div>
     </div>
 
     <!-- About Us Page -->
     <div class="content" id="about">
-        <header>
-            <h1>About Us</h1>
-        </header>
-        <p>Bittaval Shayari is the creative work of Dhaval, a passionate writer who loves expressing emotions through the art of Shayari. With each word, he aims to connect with people on a deep emotional level, bringing them closer to their own feelings.</p>
+        <h1>About Us</h1>
+        <p>Bittaval Shayari is a platform dedicated to expressing emotions through beautiful poetry. Whether you are in love, heartbroken, or just want to express your thoughts, we have something for everyone.</p>
     </div>
 
     <!-- Contact Page -->
     <div class="content" id="contact">
-        <header>
-            <h1>Contact</h1>
-        </header>
-        <p>Follow me on Instagram for more updates and to connect with me:</p>
-        <a href="https://www.instagram.com/cloutsarcasm/" target="_blank" style="color: #FF6347; font-size: 1.2rem;">Instagram Profile</a>
+        <h1>Contact Us</h1>
+        <p>If you have any questions or suggestions, feel free to reach out to us at <strong>contact@bittavalshayari.com</strong>.</p>
     </div>
 
     <!-- Privacy Policy Page Content -->
@@ -288,53 +335,39 @@
         </div>
     </div>
 
-    <!-- Scroll Button -->
+    <!-- Scroll to Top Button -->
     <button class="scroll-btn" onclick="scrollToTop()">↑</button>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Bittaval Shayari. All rights reserved.</p>
-        <a href="https://www.instagram.com/cloutsarcasm/" target="_blank">
-            <i class="instagram-icon">⭐⭐⭐⭐⭐</i>
-        </a>
-		
+        <p>&copy; 2024 Bittaval Shayari. All rights reserved.</p>
+        <a href="https://instagram.com/yourprofile" target="_blank" class="instagram-icon">⭐⭐⭐⭐⭐</a>
     </footer>
 
     <script>
-        // Show the appropriate page
-        function showPage(page) {
-            let pages = document.querySelectorAll('.content');
-            pages.forEach(function(p) {
-                p.classList.remove('active');
-            });
-            document.getElementById(page).classList.add('active');
+        // Page Navigation Logic
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.content');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
         }
 
-        // Toggle between Dark and Light Mode
+        // Toggle between light and dark mode
         function toggleMode() {
             const body = document.body;
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
             const icon = document.querySelector('.mode-toggle');
-
-            if (body.classList.contains('light-mode')) {
-                body.classList.replace('light-mode', 'dark-mode');
-                icon.textContent = '🌕'; // Change icon to sun for dark mode
-            } else {
-                body.classList.replace('dark-mode', 'light-mode');
-                icon.textContent = '🌙'; // Change icon to moon for light mode
-            }
+            icon.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
         }
 
         // Scroll to the top of the page
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize first page
+        // Initial page setup
         showPage('home');
     </script>
-
 </body>
 </html>
