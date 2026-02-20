@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://cloutsarcasm.github.io/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://shayari.drdhaval.in/</loc>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://shayari.drdhaval.in/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://shayari.drdhaval.in/"/>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/about</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://shayari.drdhaval.in/about</loc>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/contact</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://shayari.drdhaval.in/contact</loc>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/privacy</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://shayari.drdhaval.in/privacy</loc>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

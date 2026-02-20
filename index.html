@@ -9,7 +9,7 @@
 		<meta name="description" content="Discover India's most heartfelt collection of Hindi & Urdu Shayari at Cloutsarcasm. Daily updates of romantic shayari, sad shayari, love quotes, emotional poetry, life shayari, and more. Experience the magic of words with our trending shayari collection perfect for WhatsApp status and Instagram. From दिल की शायरी to मोहब्बत शायरी, find every emotion in beautiful words.">
 		<meta name="author" content="Cloutsarcasm">
 		<meta name="google-adsense-account" content="ca-pub-9869872879491570">
-		<link rel="canonical" href="https://cloutsarcasm.github.io/">
+		<link rel="canonical" href="https://shayari.drdhaval.in/">
 		<link rel="icon" href="https://raw.githubusercontent.com/cloutsarcasm/cloutsarcasm.github.io/main/favicon.ico" type="image/x-icon">
 
 		<!-- Google Analytics (GA4) -->
@@ -37,29 +37,34 @@
 		<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "WebPage",
+		  "@type": "WebSite",
 		  "name": "Bittaval Shayari - Cloutsarcasm",
-		  "url": "https://cloutsarcasm.github.io/",
+		  "url": "https://shayari.drdhaval.in/",
 		  "description": "Journey through the depths of love, heartbreak, and life's beautiful moments with Cloutsarcasm's soul-stirring Shayari collection in Hindi, Where every word tells a story, every verse touches the heart.",
 		  "publisher": {
 			"@type": "Organization",
 			"name": "Cloutsarcasm",
 			"logo": {
 			  "@type": "ImageObject",
-			  "url": "https://cloutsarcasm.github.io/logo.png"
+			  "url": "https://shayari.drdhaval.in/logo.jpg"
 			}
 		  },
-		  "mainEntityOfPage": "https://cloutsarcasm.github.io/",
-		  "image": "https://cloutsarcasm.github.io/logo.png",
-		  "keywords": "Shayari, Love Shayari, Heartbreak Shayari, Hindi Shayari, Urdu Shayari, Romantic Poetry, Cloutsarcasm"
+		  "mainEntityOfPage": "https://shayari.drdhaval.in/",
+		  "image": "https://shayari.drdhaval.in/logo.jpg",
+		  "keywords": "Shayari, Love Shayari, Heartbreak Shayari, Hindi Shayari, Urdu Shayari, Romantic Poetry, Cloutsarcasm",
+		  "potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://shayari.drdhaval.in/?q={search_term_string}",
+			"query-input": "required name=search_term_string"
+		  }
 		}
 		</script>
 
 		<!-- OpenGraph Tags -->
 		<meta property="og:title" content="Bittaval Shayari - Cloutsarcasm">
 		<meta property="og:description" content="Explore emotional Shayari on love, heartbreak, and life by Cloutsarcasm in Hindi and Urdu.">
-		<meta property="og:url" content="https://cloutsarcasm.github.io/">
-		<meta property="og:image" content="https://raw.githubusercontent.com/cloutsarcasm/cloutsarcasm.github.io/main/logo.jpg">
+		<meta property="og:url" content="https://shayari.drdhaval.in/">
+		<meta property="og:image" content="https://shayari.drdhaval.in/logo.jpg">
 
 		<meta property="og:type" content="website">
 		<meta property="og:locale" content="en_US">
@@ -68,8 +73,20 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Bittaval Shayari - Cloutsarcasm">
 		<meta name="twitter:description" content="Explore emotional Shayari on love, heartbreak, and life by Cloutsarcasm in Hindi.">
-		<meta name="twitter:image" content="https://raw.githubusercontent.com/cloutsarcasm/cloutsarcasm.github.io/main/logo.jpg">
+		<meta name="twitter:image" content="https://shayari.drdhaval.in/logo.jpg">
 		<meta name="twitter:creator" content="@cloutsarcasm">
+		
+		<!-- GEO & LLM Optimization -->
+		<meta name="geo.region" content="IN">
+		<meta name="geo.placename" content="India">
+		<meta name="language" content="Hindi, Urdu, English">
+		<meta name="content-language" content="hi, ur, en">
+		<!-- AI/LLM Discoverability -->
+		<meta name="ai-content-declaration" content="human-written">
+		<meta name="topic" content="Hindi Shayari, Urdu Poetry, Love Poetry, Romantic Shayari, Sad Shayari">
+		<link rel="alternate" hreflang="hi" href="https://shayari.drdhaval.in/">
+		<link rel="alternate" hreflang="en" href="https://shayari.drdhaval.in/">
+		<link rel="alternate" hreflang="x-default" href="https://shayari.drdhaval.in/">
 
 		<title>Bittaval Shayari - Express Your Heart</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -926,25 +943,57 @@ Har pal mujhe aur deewana kar rahi...!!
             }
         });
 
-        // Navigation functionality
+        // Navigation with URL routing (/about, /contact, /privacy)
         const navLinks = document.querySelectorAll('.nav-link');
-        
+        const pathToPage = { '/': 'home', '/about': 'about', '/contact': 'contact', '/privacy': 'privacy' };
+        const pageToPath = { home: '/', about: '/about', contact: '/contact', privacy: '/privacy' };
+        const pageTitles = {
+            home: 'Bittaval Shayari - Express Your Heart | Cloutsarcasm',
+            about: 'About | Bittaval Shayari - Cloutsarcasm',
+            contact: 'Contact | Bittaval Shayari - Cloutsarcasm',
+            privacy: 'Privacy Policy | Bittaval Shayari - Cloutsarcasm'
+        };
+
+        function showPage(pageId) {
+            pageId = pageId || 'home';
+            navLinks.forEach(l => {
+                l.classList.toggle('active', l.getAttribute('data-page') === pageId);
+            });
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.toggle('active', content.id === pageId);
+            });
+            document.title = pageTitles[pageId] || pageTitles.home;
+        }
+
+        function getPageFromPath() {
+            const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+            return pathToPage[path] || 'home';
+        }
+
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const pageId = link.getAttribute('data-page');
-                
-                // Update active states
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                
-                // Switch content
-                document.querySelectorAll('.content').forEach(content => {
-                    content.classList.remove('active');
-                });
-                document.getElementById(pageId).classList.add('active');
+                const path = pageToPath[pageId] || '/';
+                history.pushState({ page: pageId }, '', path);
+                showPage(pageId);
+                window.scrollTo(0, 0);
             });
         });
+
+        window.addEventListener('popstate', (e) => {
+            const pageId = (e.state && e.state.page) || getPageFromPath();
+            showPage(pageId);
+        });
+
+        // On initial load, detect URL path and show correct page
+        (function() {
+            const pageId = getPageFromPath();
+            if (pageId !== 'home') {
+                history.replaceState({ page: pageId }, '', pageToPath[pageId]);
+            }
+            showPage(pageId);
+        })();
 
         // Add hover effect to Shayari cards
         document.querySelectorAll('.shayari-card').forEach(card => {
