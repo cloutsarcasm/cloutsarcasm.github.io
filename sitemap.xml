@@ -7,20 +7,20 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/about</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://cloutsarcasm.github.io/about.html</loc>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/contact</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://cloutsarcasm.github.io/contact.html</loc>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://cloutsarcasm.github.io/privacy</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://cloutsarcasm.github.io/privacy.html</loc>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
