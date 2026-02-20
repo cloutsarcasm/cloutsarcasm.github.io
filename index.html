@@ -4,7 +4,6 @@
 		<!-- SEO, Analytics, and Ads -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		<!-- Enhanced Meta Tags and Keywords for Shayari Website -->
 		<meta name="keywords" content="shayari, love shayari, दिल की शायरी, romantic shayari, रोमांटिक शायरी, sad shayari, दर्द भरी शायरी, heart touching shayari, बेस्ट शायरी, two line shayari, दो लाइन शायरी, latest shayari, नई शायरी, hindi shayari, हिंदी शायरी, urdu shayari, उर्दू शायरी, emotional shayari, instagram shayari, whatsapp status shayari, life shayari, जिंदगी शायरी, mohabbat shayari, मोहब्बत शायरी, ishq shayari, इश्क़ शायरी, dard bhari shayari, breakup shayari, ब्रेकअप शायरी, friendship shayari, दोस्ती शायरी, good morning shayari, गुड मॉर्निंग शायरी, good night shayari, attitude shayari, एटीट्यूड शायरी, birthday shayari, जन्मदिन शायरी, motivational shayari, प्रेरणादायक शायरी, funny shayari, मजेदार शायरी, bewafa shayari, बेवफा शायरी, anniversary shayari, marriage shayari, शादी शायरी, festival shayari, त्योहार शायरी, rain shayari, बारिश शायरी, beautiful shayari, खूबसूरत शायरी, short shayari, छोटी शायरी, love quotes hindi, प्रेम कोट्स, romantic quotes hindi, sad quotes hindi, shayari image, शायरी इमेज, shayari photo, shayari status, shayari collection, best shayari 2024, viral shayari, trending shayari, new shayari, नई शायरी 2024, poetry hindi, कविता हिंदी, hindi kavita, हिंदी कविता, love poetry hindi, shayari video, shayari download, shayari app, shayari website, top shayari, famous shayari, मशहूर शायरी, classic shayari, क्लासिक शायरी">
 		<meta name="description" content="Discover India's most heartfelt collection of Hindi & Urdu Shayari at Cloutsarcasm. Daily updates of romantic shayari, sad shayari, love quotes, emotional poetry, life shayari, and more. Experience the magic of words with our trending shayari collection perfect for WhatsApp status and Instagram. From दिल की शायरी to मोहब्बत शायरी, find every emotion in beautiful words.">
@@ -73,22 +72,292 @@
 		<meta name="twitter:creator" content="@cloutsarcasm">
 
 		<title>Bittaval Shayari - Express Your Heart</title>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-		<link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            /* Dark theme colors */
+            --primary-dark: #FF3366;
+            --secondary-dark: #9333EA;
+            --bg-dark: #0F172A;
+            --nav-bg-dark: #1E293B;
+            --card-bg-dark: #1E293B;
+            --text-dark: #E2E8F0;
+            --hover-dark: #2D3748;
+
+            /* Light theme colors */
+            --primary-light: #FF3366;
+            --secondary-light: #7C3AED;
+            --bg-light: #F8FAFC;
+            --nav-bg-light: #FFFFFF;
+            --card-bg-light: #FFFFFF;
+            --text-light: #1E293B;
+            --hover-light: #F1F5F9;
+
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+            transition: all var(--transition-speed) ease;
+        }
+
+        body.light-mode {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        nav {
+            background: var(--nav-bg-dark);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            transition: all var(--transition-speed) ease;
+        }
+
+        body.light-mode nav {
+            background: var(--nav-bg-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.7rem 1.5rem;
+            border-radius: 0.8rem;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.light-mode .nav-link {
+            color: var(--text-light);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--primary-dark);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .nav-link.active {
+            color: var(--primary-dark);
+            background: rgba(255, 51, 102, 0.1);
+        }
+
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all var(--transition-speed);
+        }
+
+        body.light-mode .theme-toggle {
+            color: var(--text-light);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(360deg);
+            color: var(--primary-dark);
+        }
+
+        .content {
+            display: none;
+            padding: 7rem 2rem 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .content.active {
+            display: block;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .shayari-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .shayari-card {
+            background: var(--card-bg-dark);
+            border-radius: 1.2rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        body.light-mode .shayari-card {
+            background: var(--card-bg-light);
+        }
+
+        .shayari-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-dark), var(--secondary-dark));
+            opacity: 0;
+            transition: all var(--transition-speed);
+            z-index: 0;
+        }
+
+        .shayari-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .shayari-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .shayari-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shayari-card p {
+            line-height: 1.8;
+            margin: 0;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .social-link {
+            background: var(--primary-dark);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: var(--secondary-dark);
+        }
+
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--card-bg-dark);
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed);
+        }
+
+        body.light-mode .page-content {
+            background: var(--card-bg-light);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 0.5rem;
+            }
+            
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .social-links {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .social-link {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body class="dark-mode">
-	<nav>
-		<div class="nav-links">
-			<a href="index.html" class="nav-link active">Home</a>
-			<a href="about.html" class="nav-link">About</a>
-			<a href="contact.html" class="nav-link">Contact</a>
-			<a href="privacy.html" class="nav-link">Privacy</a>
-		</div>
-		<button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-	</nav>
+    <nav>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="about">About</a>
+            <a href="#" class="nav-link" data-page="contact">Contact</a>
+            <a href="#" class="nav-link" data-page="privacy">Privacy</a>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
 
-	<main>
+    <main>
+        <section id="home" class="content active">
 		<div class="shayari-grid">
 <div class="shayari-card">
 <h3>💝 Teri Yaad</h3>
@@ -428,21 +697,10 @@ Har pal mujhe aur deewana kar rahi...!!
     <p>Woh saree mein, tum is kadar lagti ho, <br> Jaise chaand ki chaandi bhi tumse nikharti ho. <br> Nigahen kahaniyan sunaati hain, hothon pe khamoshi hai, <br> Zubaan pe wafa, aur rooh mein unchai hai.</p>
 </div>
 
-		</div>
-	</main>
-
-    <div class="social-links">
-        <a href="https://www.instagram.com/bittaval/" target="_blank" class="social-link" title="Follow us on Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-
-    <script src="js/app.js"></script>
-	<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-9869872879491570">
-</amp-auto-ads>
-</body>
-</html>
+        </section>
+     <section id="about" class="content">
+            <div class="page-content">
+        <h2>कलम की कहानी - A Heart's Silent Poetry</h2>
         
         <div class="story-section">
             <p>
@@ -668,44 +926,24 @@ Har pal mujhe aur deewana kar rahi...!!
             }
         });
 
-        // Navigation with URL routing (/about, /contact, /privacy)
+        // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
-        const pathToPage = { '/': 'home', '/about': 'about', '/contact': 'contact', '/privacy': 'privacy' };
-        const pageToPath = { home: '/', about: '/about', contact: '/contact', privacy: '/privacy' };
-
-        function showPage(pageId) {
-            pageId = pageId || 'home';
-            navLinks.forEach(l => {
-                l.classList.toggle('active', l.getAttribute('data-page') === pageId);
-            });
-            document.querySelectorAll('.content').forEach(content => {
-                content.classList.toggle('active', content.id === pageId);
-            });
-        }
-
-        function getPageFromPath() {
-            const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
-            return pathToPage[path] || pathToPage['/'];
-        }
-
+        
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const pageId = link.getAttribute('data-page');
-                const path = pageToPath[pageId];
-                history.pushState({ page: pageId }, '', path);
-                showPage(pageId);
+                
+                // Update active states
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Switch content
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(pageId).classList.add('active');
             });
-        });
-
-        window.addEventListener('popstate', (e) => {
-            const pageId = (e.state && e.state.page) || getPageFromPath();
-            showPage(pageId);
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const pageId = getPageFromPath();
-            showPage(pageId);
         });
 
         // Add hover effect to Shayari cards
@@ -734,3 +972,4 @@ Har pal mujhe aur deewana kar rahi...!!
 </amp-auto-ads>
 </body>
 </html>
+
